@@ -63,6 +63,13 @@
     }
 
     async function getFriendship() {
+      const friend = await liff.getFriendship()
+      liff.getElementById("friendship").append(friend.friendFlag)
+      if (!friend.friendFlag) {
+        liff (confirm("คุณยังไม่ได้เป็นเพื่อนกับ KORNOR Official จะเพิ่มเลยไหม?")) {
+          window.location = "https://lin.ee/SEikGci"
+        }
+      }
     }
 
     async function sendMsg() {
@@ -115,7 +122,7 @@
       getEnvironment()
       getUserProfile()
       getContext()
-      // getFriendship()
+      getFriendship()
       // createUniversalLink()
     }
     main()
