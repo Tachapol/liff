@@ -66,7 +66,7 @@
       const friend = await liff.getFriendship()
       liff.getElementById("friendship").append(friend.friendFlag)
       if (!friend.friendFlag) {
-        liff (confirm("คุณยังไม่ได้เป็นเพื่อนกับ KORNOR Official จะเพิ่มเลยไหม?")) {
+        if (confirm("คุณยังไม่ได้เป็นเพื่อนกับ KORNOR Official จะเพิ่มเลยไหม?")) {
           window.location = "https://lin.ee/SEikGci"
         }
       }
